@@ -1,6 +1,5 @@
 import java.util.Random;
 
-// GameBoard class
 public class GameBoard {
     public final int SIZE = 9;
     private Cell[][] board;

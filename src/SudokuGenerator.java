@@ -96,7 +96,6 @@ public class SudokuGenerator {
         int col = -1;
         boolean isEmpty = true;
     
-        // find the first empty cell in the board
         for (int i = 0; i < BOARD_SIZE; i++) {
             for (int j = 0; j < BOARD_SIZE; j++) {
                 if (board[i][j] == 0) {
@@ -111,12 +110,10 @@ public class SudokuGenerator {
             }
         }
     
-        // if there is no empty cell, the board is solved
         if (isEmpty) {
             return true;
         }
     
-        // try each number from 1 to 9 in the empty cell
         for (int num = 1; num <= BOARD_SIZE; num++) {
             if (isValid(board, row, col, num)) {
                 board[row][col] = num;
